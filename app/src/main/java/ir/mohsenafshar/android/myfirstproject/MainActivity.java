@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout l = findViewById(R.id.lay);
         l.getLayoutTransition().setDuration(1000);
 
-        recyclerView.getLayoutTransition().setDuration(1000);
+//        recyclerView.getLayoutTransition().setDuration(1000);
 
     }
 
@@ -77,8 +77,16 @@ public class MainActivity extends AppCompatActivity {
                 myAdapter.notifyItemInserted(strings.size() - 2);
             }
         }, 1000);*/
-        adder(0);
+        adder("mohsen");
 
+    }
+
+    private void adder(String tx) {
+        final List<String> list = Arrays.asList("ABCD", "EFGH", "WRTY", "ZXCV");
+
+
+        strings.add(tx);
+        myAdapter.notifyItemInserted(strings.size() - 1);
     }
 
     private void adder(final int i) {
